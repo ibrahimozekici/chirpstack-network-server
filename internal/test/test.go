@@ -10,11 +10,11 @@ import (
 	migrate "github.com/rubenv/sql-migrate"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/brocaar/chirpstack-network-server/internal/band"
-	"github.com/brocaar/chirpstack-network-server/internal/config"
-	"github.com/brocaar/chirpstack-network-server/internal/migrations"
 	"github.com/brocaar/lorawan"
 	loraband "github.com/brocaar/lorawan/band"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/band"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/config"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/migrations"
 )
 
 func init() {

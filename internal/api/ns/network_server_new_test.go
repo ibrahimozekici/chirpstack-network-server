@@ -14,17 +14,17 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 
-	"github.com/brocaar/chirpstack-api/go/v3/common"
-	"github.com/brocaar/chirpstack-api/go/v3/ns"
-	"github.com/brocaar/chirpstack-network-server/internal/band"
-	"github.com/brocaar/chirpstack-network-server/internal/config"
-	"github.com/brocaar/chirpstack-network-server/internal/downlink/data/classb"
-	"github.com/brocaar/chirpstack-network-server/internal/gateway"
-	"github.com/brocaar/chirpstack-network-server/internal/gps"
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
-	"github.com/brocaar/chirpstack-network-server/internal/test"
 	"github.com/brocaar/lorawan"
 	loraband "github.com/brocaar/lorawan/band"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/common"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/ns"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/band"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/config"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/downlink/data/classb"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/gateway"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/gps"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/test"
 )
 
 type NetworkServerAPITestSuite struct {
@@ -1080,6 +1080,22 @@ func (ts *NetworkServerAPITestSuite) TestGateway() {
 			})
 			assert.Equal(codes.NotFound, grpc.Code(err))
 		})
+	})
+}
+
+func (ts *NetworkServerAPITestSuite) TestADR() {
+	ts.T().Run("GetADRAlgorithms", func(t *testing.T) {
+		assert := require.New(t)
+		resp, err := ts.api.GetADRAlgorithms(context.Background(), nil)
+		assert.NoError(err)
+		assert.Equal(&ns.GetADRAlgorithmsResponse{
+			AdrAlgorithms: []*ns.ADRAlgorithm{
+				{
+					Id:   "default",
+					Name: "Default ADR algorithm",
+				},
+			},
+		}, resp)
 	})
 }
 

@@ -8,23 +8,23 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/brocaar/chirpstack-api/go/v3/as"
-	"github.com/brocaar/chirpstack-api/go/v3/common"
-	"github.com/brocaar/chirpstack-api/go/v3/nc"
-	"github.com/brocaar/chirpstack-network-server/internal/backend/applicationserver"
-	"github.com/brocaar/chirpstack-network-server/internal/backend/controller"
-	"github.com/brocaar/chirpstack-network-server/internal/band"
-	"github.com/brocaar/chirpstack-network-server/internal/config"
-	datadown "github.com/brocaar/chirpstack-network-server/internal/downlink/data"
-	"github.com/brocaar/chirpstack-network-server/internal/downlink/data/classb"
-	"github.com/brocaar/chirpstack-network-server/internal/framelog"
-	"github.com/brocaar/chirpstack-network-server/internal/helpers"
-	"github.com/brocaar/chirpstack-network-server/internal/logging"
-	"github.com/brocaar/chirpstack-network-server/internal/maccommand"
-	"github.com/brocaar/chirpstack-network-server/internal/models"
-	"github.com/brocaar/chirpstack-network-server/internal/roaming"
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
 	"github.com/brocaar/lorawan"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/as"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/common"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/nc"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/backend/applicationserver"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/backend/controller"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/band"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/config"
+	datadown "github.com/ibrahimozekici/chirpstack-network-server/internal/downlink/data"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/downlink/data/classb"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/framelog"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/helpers"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/logging"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/maccommand"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/models"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/roaming"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
 )
 
 const applicationClientTimeout = time.Second
@@ -615,6 +615,7 @@ func handleUplinkACK(ctx *dataContext) error {
 		DevEui:       ctx.DeviceSession.DevEUI[:],
 		FCnt:         qi.FCnt,
 		Acknowledged: true,
+		Data:         string(qi.FRMPayload),
 	})
 	if err != nil {
 		return errors.Wrap(err, "application-server client error")

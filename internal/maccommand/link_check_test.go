@@ -7,12 +7,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/stretchr/testify/suite"
 
-	"github.com/brocaar/chirpstack-api/go/v3/gw"
-	"github.com/brocaar/chirpstack-network-server/internal/band"
-	"github.com/brocaar/chirpstack-network-server/internal/helpers"
-	"github.com/brocaar/chirpstack-network-server/internal/models"
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
 	"github.com/brocaar/lorawan"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/gw"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/band"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/helpers"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/models"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
 )
 
 type LinkCheckTestSuite struct {

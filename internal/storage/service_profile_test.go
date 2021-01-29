@@ -8,7 +8,7 @@ import (
 	"github.com/pkg/errors"
 	. "github.com/smartystreets/goconvey/convey"
 
-	"github.com/brocaar/chirpstack-network-server/internal/test"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/test"
 )
 
 func TestServiceProfile(t *testing.T) {

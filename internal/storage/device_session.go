@@ -15,11 +15,11 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/brocaar/chirpstack-api/go/v3/common"
-	"github.com/brocaar/chirpstack-network-server/internal/band"
-	"github.com/brocaar/chirpstack-network-server/internal/logging"
 	"github.com/brocaar/lorawan"
 	loraband "github.com/brocaar/lorawan/band"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/common"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/band"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/logging"
 )
 
 const (

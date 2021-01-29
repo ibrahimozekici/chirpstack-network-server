@@ -8,15 +8,15 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/require"
 
-	"github.com/brocaar/chirpstack-api/go/v3/as"
-	"github.com/brocaar/chirpstack-api/go/v3/gw"
-	"github.com/brocaar/chirpstack-api/go/v3/nc"
-	"github.com/brocaar/chirpstack-network-server/internal/backend/applicationserver"
-	"github.com/brocaar/chirpstack-network-server/internal/backend/controller"
-	"github.com/brocaar/chirpstack-network-server/internal/backend/gateway"
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
-	"github.com/brocaar/chirpstack-network-server/internal/test"
 	"github.com/brocaar/lorawan"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/as"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/gw"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/nc"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/backend/applicationserver"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/backend/controller"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/backend/gateway"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/test"
 )
 
 func TestDownlinkAck(t *testing.T) {

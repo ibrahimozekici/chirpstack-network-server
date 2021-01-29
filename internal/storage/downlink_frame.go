@@ -12,7 +12,7 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/brocaar/chirpstack-network-server/internal/logging"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/logging"
 )
 
 const downlinkFrameTTL = time.Second * 10

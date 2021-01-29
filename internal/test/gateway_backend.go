@@ -1,6 +1,6 @@
 package test
 
-import "github.com/brocaar/chirpstack-api/go/v3/gw"
+import "github.com/ibrahimozekici/chirpstack-api/go/v4/gw"
 
 // GatewayBackend is a test gateway backend.
 type GatewayBackend struct {

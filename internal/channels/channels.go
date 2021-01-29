@@ -1,9 +1,9 @@
 package channels
 
 import (
-	"github.com/brocaar/chirpstack-network-server/internal/band"
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
 	"github.com/brocaar/lorawan"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/band"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
 )
 
 // HandleChannelReconfigure handles the reconfiguration of active channels

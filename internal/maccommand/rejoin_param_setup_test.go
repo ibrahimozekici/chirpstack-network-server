@@ -7,8 +7,8 @@ import (
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/require"
 
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
 	"github.com/brocaar/lorawan"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
 )
 
 func TestRejoinParamSetup(t *testing.T) {

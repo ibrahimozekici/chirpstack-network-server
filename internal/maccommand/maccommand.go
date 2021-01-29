@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/brocaar/chirpstack-api/go/v3/as"
-	"github.com/brocaar/chirpstack-network-server/internal/models"
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
 	"github.com/brocaar/lorawan"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/as"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/models"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
 )
 
 // Handle handles a MACCommand sent by a node.

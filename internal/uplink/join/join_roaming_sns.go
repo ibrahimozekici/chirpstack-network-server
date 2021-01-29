@@ -5,8 +5,8 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/brocaar/chirpstack-network-server/internal/models"
 	"github.com/brocaar/lorawan/backend"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/models"
 )
 
 // HandleStartPR handles starting a passive-roaming OTAA activation as the

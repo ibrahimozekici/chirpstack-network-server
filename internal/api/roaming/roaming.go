@@ -14,17 +14,17 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/brocaar/chirpstack-network-server/internal/band"
-	"github.com/brocaar/chirpstack-network-server/internal/config"
-	downdata "github.com/brocaar/chirpstack-network-server/internal/downlink/data"
-	"github.com/brocaar/chirpstack-network-server/internal/logging"
-	"github.com/brocaar/chirpstack-network-server/internal/models"
-	"github.com/brocaar/chirpstack-network-server/internal/roaming"
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
-	updata "github.com/brocaar/chirpstack-network-server/internal/uplink/data"
-	"github.com/brocaar/chirpstack-network-server/internal/uplink/join"
 	"github.com/brocaar/lorawan"
 	"github.com/brocaar/lorawan/backend"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/band"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/config"
+	downdata "github.com/ibrahimozekici/chirpstack-network-server/internal/downlink/data"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/logging"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/models"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/roaming"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
+	updata "github.com/ibrahimozekici/chirpstack-network-server/internal/uplink/data"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/uplink/join"
 )
 
 // Setup configures the roaming API.

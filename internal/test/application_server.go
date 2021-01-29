@@ -5,8 +5,8 @@ import (
 	context "golang.org/x/net/context"
 	"google.golang.org/grpc"
 
-	"github.com/brocaar/chirpstack-api/go/v3/as"
-	"github.com/brocaar/chirpstack-network-server/internal/api/client/asclient"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/as"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/api/client/asclient"
 )
 
 // ApplicationServerPool is an application-server pool for testing.

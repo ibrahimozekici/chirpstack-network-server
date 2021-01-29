@@ -10,13 +10,13 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/stretchr/testify/require"
 
-	"github.com/brocaar/chirpstack-api/go/v3/as"
-	"github.com/brocaar/chirpstack-api/go/v3/gw"
-	"github.com/brocaar/chirpstack-api/go/v3/nc"
-	"github.com/brocaar/chirpstack-network-server/internal/downlink/ack"
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
 	"github.com/brocaar/lorawan"
 	"github.com/brocaar/lorawan/backend"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/as"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/gw"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/nc"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/downlink/ack"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
 )
 
 var lastToken uint32

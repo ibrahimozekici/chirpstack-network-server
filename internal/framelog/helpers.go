@@ -3,8 +3,8 @@ package framelog
 import (
 	"github.com/pkg/errors"
 
-	"github.com/brocaar/chirpstack-api/go/v3/ns"
-	"github.com/brocaar/chirpstack-network-server/internal/models"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/ns"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/models"
 )
 
 // CreateUplinkFrameLog creates a UplinkFrameLog.

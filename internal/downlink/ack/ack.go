@@ -10,16 +10,16 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/brocaar/chirpstack-api/go/v3/as"
-	"github.com/brocaar/chirpstack-api/go/v3/gw"
-	"github.com/brocaar/chirpstack-api/go/v3/nc"
-	"github.com/brocaar/chirpstack-api/go/v3/ns"
-	"github.com/brocaar/chirpstack-network-server/internal/backend/controller"
-	"github.com/brocaar/chirpstack-network-server/internal/backend/gateway"
-	"github.com/brocaar/chirpstack-network-server/internal/framelog"
-	"github.com/brocaar/chirpstack-network-server/internal/helpers"
-	"github.com/brocaar/chirpstack-network-server/internal/logging"
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/as"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/gw"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/nc"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/ns"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/backend/controller"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/backend/gateway"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/framelog"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/helpers"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/logging"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
 )
 
 var (

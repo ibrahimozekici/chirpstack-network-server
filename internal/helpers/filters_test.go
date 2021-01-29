@@ -3,11 +3,11 @@ package helpers
 import (
 	"testing"
 
-	"github.com/brocaar/chirpstack-api/go/v3/gw"
-	"github.com/brocaar/chirpstack-network-server/internal/config"
-	"github.com/brocaar/chirpstack-network-server/internal/models"
 	"github.com/brocaar/lorawan"
 	"github.com/gofrs/uuid"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/gw"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/config"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/models"
 	"github.com/stretchr/testify/require"
 )
 

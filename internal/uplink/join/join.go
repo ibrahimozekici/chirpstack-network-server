@@ -12,22 +12,22 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/brocaar/chirpstack-api/go/v3/as"
-	"github.com/brocaar/chirpstack-api/go/v3/nc"
-	"github.com/brocaar/chirpstack-network-server/internal/backend/controller"
-	"github.com/brocaar/chirpstack-network-server/internal/backend/joinserver"
-	"github.com/brocaar/chirpstack-network-server/internal/band"
-	"github.com/brocaar/chirpstack-network-server/internal/config"
-	"github.com/brocaar/chirpstack-network-server/internal/downlink/join"
-	"github.com/brocaar/chirpstack-network-server/internal/framelog"
-	"github.com/brocaar/chirpstack-network-server/internal/helpers"
-	"github.com/brocaar/chirpstack-network-server/internal/logging"
-	"github.com/brocaar/chirpstack-network-server/internal/models"
-	"github.com/brocaar/chirpstack-network-server/internal/roaming"
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
 	"github.com/brocaar/lorawan"
 	"github.com/brocaar/lorawan/backend"
 	loraband "github.com/brocaar/lorawan/band"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/as"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/nc"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/backend/controller"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/backend/joinserver"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/band"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/config"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/downlink/join"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/framelog"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/helpers"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/logging"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/models"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/roaming"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
 )
 
 // ErrAbort is used to abort the flow without error
@@ -88,11 +88,11 @@ func Handle(ctx context.Context, rxPacket models.RXPacket) error {
 
 	for _, f := range []func() error{
 		jctx.setContextFromJoinRequestPHYPayload,
-		jctx.logJoinRequestFramesCollected,
 		jctx.getDeviceOrTryRoaming,
 		jctx.getDeviceProfile,
 		jctx.getServiceProfile,
 		jctx.filterRxInfoByServiceProfile,
+		jctx.logJoinRequestFramesCollected,
 		jctx.abortOnDeviceIsDisabled,
 		jctx.validateNonce,
 		jctx.getRandomDevAddr,

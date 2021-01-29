@@ -9,11 +9,11 @@ import (
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 
-	"github.com/brocaar/chirpstack-api/go/v3/as"
-	"github.com/brocaar/chirpstack-network-server/internal/backend/applicationserver"
-	"github.com/brocaar/chirpstack-network-server/internal/gps"
-	"github.com/brocaar/chirpstack-network-server/internal/logging"
 	"github.com/brocaar/lorawan"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/as"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/backend/applicationserver"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/gps"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/logging"
 )
 
 // DeviceQueueItem represents an item in the device queue (downlink).

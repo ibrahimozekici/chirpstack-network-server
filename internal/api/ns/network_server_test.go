@@ -12,15 +12,15 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/codes"
 
-	"github.com/brocaar/chirpstack-api/go/v3/common"
-	"github.com/brocaar/chirpstack-api/go/v3/gw"
-	"github.com/brocaar/chirpstack-api/go/v3/ns"
-	"github.com/brocaar/chirpstack-network-server/internal/config"
-	"github.com/brocaar/chirpstack-network-server/internal/framelog"
-	"github.com/brocaar/chirpstack-network-server/internal/gps"
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
-	"github.com/brocaar/chirpstack-network-server/internal/test"
 	"github.com/brocaar/lorawan"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/common"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/gw"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/ns"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/config"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/framelog"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/gps"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/test"
 )
 
 func TestNetworkServerAPI(t *testing.T) {
@@ -369,6 +369,7 @@ func TestNetworkServerAPI(t *testing.T) {
 					MaxDutyCycle:       1,
 					SupportsJoin:       true,
 					Supports_32BitFCnt: true,
+					AdrAlgorithmId:     "default",
 				},
 			})
 			So(err, ShouldBeNil)
@@ -401,6 +402,7 @@ func TestNetworkServerAPI(t *testing.T) {
 					SupportsJoin:       true,
 					RfRegion:           "EU868", // set by the api
 					Supports_32BitFCnt: true,
+					AdrAlgorithmId:     "default",
 				})
 			})
 		})

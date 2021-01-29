@@ -5,11 +5,11 @@ import (
 
 	"github.com/pkg/errors"
 
-	"github.com/brocaar/chirpstack-network-server/internal/config"
-	"github.com/brocaar/chirpstack-network-server/internal/downlink/data"
-	"github.com/brocaar/chirpstack-network-server/internal/downlink/join"
-	"github.com/brocaar/chirpstack-network-server/internal/downlink/multicast"
-	"github.com/brocaar/chirpstack-network-server/internal/downlink/proprietary"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/config"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/downlink/data"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/downlink/join"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/downlink/multicast"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/downlink/proprietary"
 )
 
 var (

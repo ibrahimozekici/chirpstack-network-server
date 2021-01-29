@@ -7,8 +7,8 @@ import (
 
 	"github.com/brocaar/lorawan/band"
 
-	"github.com/brocaar/chirpstack-network-server/internal/storage"
 	"github.com/brocaar/lorawan"
+	"github.com/ibrahimozekici/chirpstack-network-server/internal/storage"
 	. "github.com/smartystreets/goconvey/convey"
 )
 

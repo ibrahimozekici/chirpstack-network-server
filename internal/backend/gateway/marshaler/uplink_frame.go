@@ -7,7 +7,7 @@ import (
 	"github.com/golang/protobuf/jsonpb"
 	"github.com/golang/protobuf/proto"
 
-	"github.com/brocaar/chirpstack-api/go/v3/gw"
+	"github.com/ibrahimozekici/chirpstack-api/go/v4/gw"
 )
 
 // UnmarshalUplinkFrame unmarshals an UplinkFrame.

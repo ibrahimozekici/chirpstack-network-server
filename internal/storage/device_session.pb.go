@@ -5,9 +5,9 @@ package storage
 
 import (
 	fmt "fmt"
-	common "github.com/brocaar/chirpstack-api/go/v3/common"
 	proto "github.com/golang/protobuf/proto"
 	timestamp "github.com/golang/protobuf/ptypes/timestamp"
+	common "github.com/ibrahimozekici/chirpstack-api/go/v4/common"
 	math "math"
 )
 
